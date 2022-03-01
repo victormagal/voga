@@ -2,6 +2,7 @@ import client from '../utils/client';
 import { getOffices } from '../utils/queries';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import OpenAccount from '../components/OpenAccount';
 
 export default function Home({ offices }) {
   return (
@@ -15,6 +16,7 @@ export default function Home({ offices }) {
         </div>
       ))} */}
       <Header />
+      <OpenAccount />
       <Footer />
     </>
   )
