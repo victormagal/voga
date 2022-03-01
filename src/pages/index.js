@@ -1,17 +1,19 @@
 import client from '../utils/client';
 import { getOffices } from "../utils/queries";
+import Header from '../components/Header';
 
 export default function Home({ offices }) {
   return (
     <>
-      {offices?.map(office => (
+      {/* {offices?.map(office => (
         <div key={office.id}>
           <h1>{office.title}</h1>
           <p dangerouslySetInnerHTML={{
             __html: office.excerpt
           }} />
         </div>
-      ))}
+      ))} */}
+      <Header />
     </>
   )
 }
