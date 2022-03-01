@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Container } from "../Guide";
+import { Container } from '../Guide';
 
 export default function Header() {
   return (
