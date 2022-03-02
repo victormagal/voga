@@ -17,3 +17,17 @@ export const getOffices = gql`
     }
   }
 `;
+
+export const getProducts = gql`
+  query allProducts {
+    produtos {
+      edges {
+        node {
+          id
+          title
+          excerpt
+        }
+      }
+    }
+  }
+`;
