@@ -31,3 +31,30 @@ export const getProducts = gql`
     }
   }
 `;
+
+export const getQualitiesAndPrizes = gql`
+  query allPrizesAndQualities {
+    premios {
+      edges {
+        node {
+          id
+          title
+          featuredImage {
+            node {
+              sourceUrl
+            }
+          }
+        }
+      }
+    }
+    valores {
+      edges {
+        node {
+          id
+          title
+          excerpt
+        }
+      }
+    }
+  }
+`;
