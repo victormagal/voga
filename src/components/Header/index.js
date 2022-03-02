@@ -22,12 +22,12 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/about">
               <a className="text-white hover:text-soft-blue">Sobre a Voga</a>
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/advisor">
               <a className="text-white hover:text-soft-blue">Assessoria</a>
             </Link>
           </li>
