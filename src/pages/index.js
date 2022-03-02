@@ -36,7 +36,7 @@ export default function Home({ products }) {
       <ContainerWithBackgroundImage uri='/bg-products-home.png'>
         <div className='col-span-10 col-start-2 flex flex-col items-stretch py-32'>
           {products?.map(product => (
-            <Product id={product.id} title={product.title} excerpt={product.excerpt} />
+            <Product key={product.id} title={product.title} excerpt={product.excerpt} />
           ))}
           <a className="bg-soft-blue block font-bold py-3 rounded-full self-center text-center text-xl text-white uppercase w-5/12" href='#this' title='Abra sua conta'>Conheça a assessoria da Voga</a>
         </div>
