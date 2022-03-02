@@ -8,15 +8,13 @@ import Quality from '../components/Quality';
 import Prize from '../components/Prize';
 import Image from 'next/image';
 
-export default function Home({ qualities, prizes }) {
-  console.log(qualities);
-  console.log(prizes);
+export default function About({ qualities, prizes }) {
   return (
     <>
       <Header />
       <ContainerWithBackgroundImage uri='/bg-header-about.png'>
-        <div className='col-span-6 flex items-stretch py-44'>
-          <h1 className='font-bold text-6xl text-white self-center'>Nós sabemos quanto esforço é necessário para formar um bom patrimônio.</h1>
+        <div className='col-span-6 py-44'>
+          <h1 className='font-bold text-6xl text-white'>Nós sabemos quanto esforço é necessário para formar um bom patrimônio.</h1>
         </div>
         <div className='col-span-6 py-44'>
           <p className='text-xl text-white'>
