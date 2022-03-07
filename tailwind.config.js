@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     colors: {
       'dark-blue': '#00293D',
+      'baby-blue': '#CFEBFF',
       'dark-gray': '#011E2C',
       'soft-blue': '#008AEE',
       'white': 'white'
