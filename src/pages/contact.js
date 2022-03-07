@@ -7,6 +7,8 @@ import client from '../utils/client';
 import { Container } from '../components/Guide';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { Field, Form, Formik } from 'formik';
+import * as Yup from 'yup';
 
 export default function Offices({ locations }) {
   return (
@@ -40,7 +42,51 @@ export default function Offices({ locations }) {
             </div>  
           ))}
         </div>
-        <div className='col-span-6 col-end-13'></div>
+        <div className='col-span-6 col-end-13'>
+          <Formik
+            initialValues={{
+              nome: '',
+              email: '',
+              telefone: '',
+              mensagem: ''
+            }}
+            validationSchema={Yup.object({
+              nome: Yup.string().required('Campo obrigatório'),
+              email: Yup.string().email('E-mail inválido').required('Campo obrigatório'),
+              telefone: Yup.string().required('Campo obrigatório'),
+              mensagem: Yup.string().required('Campo obrigatório')
+            })}
+            onSubmit={values => {
+              console.log(values);
+            }}
+          >
+            {({ errors, handleChange, values }) => (
+              <Form>
+                <ul>
+                  <li>
+                    <Field className='border' name='nome' placeholder='Nome' type='text' value={values.nome} />
+                    {errors.nome}
+                  </li>
+                  <li>
+                    <Field className='border' name='email' placeholder='E-mail' type='email' value={values.email} />
+                    {errors.email}
+                  </li>
+                  <li>
+                    <Field className='border' name='telefone' placeholder='Telefone' type='text' value={values.telefone} />
+                    {errors.telefone}
+                  </li>
+                  <li>
+                    <Field as='textarea' className='border' name='mensagem' placeholder='Mensagem' value={values.mensagem} />
+                    {errors.telefone}
+                  </li>
+                  <li>
+                    <button type='submit'>Enviar Mensagem</button>  
+                  </li>  
+                </ul> 
+              </Form>
+            )}
+          </Formik>
+        </div>
       </Container>
       <OpenAccount />
       <Footer />
