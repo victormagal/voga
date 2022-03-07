@@ -8,6 +8,11 @@ export const getOffices = gql`
           id
           title
           excerpt
+          featuredImage {
+            node {
+              sourceUrl
+            }
+          }
           content_escritorio {
             label
             link
