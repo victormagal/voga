@@ -11,7 +11,9 @@ module.exports = {
       'baby-blue': '#CFEBFF',
       'dark-gray': '#011E2C',
       'soft-blue': '#008AEE',
-      'white': 'white'
+      'white': 'white',
+      'red': 'red',
+      'baby-red': '#F7A8A8'
     },
     extend: {
       fontFamily: {
