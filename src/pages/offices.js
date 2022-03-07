@@ -8,7 +8,6 @@ import { Container } from '../components/Guide';
 import Office from '../components/Office';
 
 export default function Offices({ offices }) {
-  console.log(offices);
   return (
     <>
       <Header />
@@ -39,7 +38,7 @@ export default function Offices({ offices }) {
         <Office
           key={office.id}
           title={office.title}
-          excerpt={office.excerpt}
+          summary={office.content_escritorio.summary}
           sourceImg={office.featuredImage.node.sourceUrl}
           label={office.content_escritorio.label}
           link={office.content_escritorio.link}

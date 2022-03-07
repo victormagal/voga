@@ -7,15 +7,31 @@ export const getOffices = gql`
         node {
           id
           title
-          excerpt
           featuredImage {
             node {
               sourceUrl
             }
           }
           content_escritorio {
+            summary
             label
             link
+          }
+        }
+      }
+    }
+  }
+`;
+
+export const getLocations = gql`
+  query allLocations {
+    escritorios {
+      edges {
+        node {
+          id
+          title
+          content_escritorio {
+            summary
           }
         }
       }
