@@ -19,7 +19,7 @@ export default function Offices({ locations }) {
           <h1 className='font-bold text-6xl text-white'>Fale com a VOGA</h1>
         </div>
       </ContainerWithBackgroundImage>
-      <Container className='py-48'>
+      <Container className='flex items-center py-48'>
         <div className='col-span-5'>
           <div className='flex'>
             <FontAwesomeIcon className='mr-4 pt-2' icon={faPhone} />
@@ -62,25 +62,25 @@ export default function Offices({ locations }) {
           >
             {({ errors, handleChange, values }) => (
               <Form>
-                <ul>
-                  <li>
-                    <Field className='border' name='nome' placeholder='Nome' type='text' value={values.nome} />
-                    {errors.nome}
+                <ul className='flex flex-col'>
+                  <li className='mb-12'>
+                    <Field className={`${errors.nome ? 'bg-baby-red' : 'bg-baby-blue'} font-medium placeholder:text-dark-blue p-8 rounded-3xl text-2xl text-dark-blue w-full`} name='nome' placeholder='Nome' type='text' value={values.nome} />
+                    {errors.nome && <p className='mt-2 text-red'>{errors.nome}</p>}
+                  </li>
+                  <li className='mb-12'>
+                    <Field className={`${errors.email ? 'bg-baby-red' : 'bg-baby-blue'} font-medium placeholder:text-dark-blue p-8 rounded-3xl text-2xl text-dark-blue w-full`} name='email' placeholder='E-mail' type='email' value={values.email} />
+                    {errors.email && <p className='mt-2 text-red'>{errors.email}</p>}
+                  </li>
+                  <li className='mb-12'>
+                    <Field className={`${errors.telefone ? 'bg-baby-red' : 'bg-baby-blue'} font-medium placeholder:text-dark-blue p-8 rounded-3xl text-2xl text-dark-blue w-full`} name='telefone' placeholder='Telefone' type='text' value={values.telefone} />
+                    {errors.telefone && <p className='mt-2 text-red'>{errors.telefone}</p>}
+                  </li>
+                  <li className='mb-12'>
+                    <Field as='textarea' className={`${errors.mensagem ? 'bg-baby-red' : 'bg-baby-blue'} font-medium h-56 placeholder:text-dark-blue p-8 rounded-3xl text-2xl text-dark-blue w-full`} name='mensagem' placeholder='Mensagem' value={values.mensagem} />
+                    {errors.mensagem && <p className='mt-2 text-red'>{errors.mensagem}</p>}
                   </li>
                   <li>
-                    <Field className='border' name='email' placeholder='E-mail' type='email' value={values.email} />
-                    {errors.email}
-                  </li>
-                  <li>
-                    <Field className='border' name='telefone' placeholder='Telefone' type='text' value={values.telefone} />
-                    {errors.telefone}
-                  </li>
-                  <li>
-                    <Field as='textarea' className='border' name='mensagem' placeholder='Mensagem' value={values.mensagem} />
-                    {errors.telefone}
-                  </li>
-                  <li>
-                    <button type='submit'>Enviar Mensagem</button>  
+                    <button className='cursor-pointer font-bold bg-soft-blue px-12 py-4 rounded-full text-lg text-white' type='submit'>Enviar Mensagem</button>  
                   </li>  
                 </ul> 
               </Form>
