@@ -41,7 +41,7 @@ export default function Offices({ locations }) {
               <p className='text-2xl'>
                 <span className='font-bold text-3xl'>{location.title}: </span>{location.content_escritorio.summary}
               </p>
-            </div>  
+            </div>
           ))}
         </div>
         <div className='col-span-6 col-end-13'>
@@ -58,11 +58,16 @@ export default function Offices({ locations }) {
               telefone: Yup.string().required('Campo obrigatório'),
               mensagem: Yup.string().required('Campo obrigatório')
             })}
-            onSubmit={values => {
-              console.log(values);
+            onSubmit={async values => {
+              fetch('/api/mail', {
+                method: 'POST',
+                body: JSON.stringify(values)
+              }).then(res => {
+                res.status === 200 ? console.log('Email enviado') : console.log('Ocorreu algum erro, tente novamente mais tarde');
+              })
             }}
           >
-            {({ errors, handleChange, values }) => (
+            {({ errors, values }) => (
               <Form>
                 <ul className='flex flex-col'>
                   <li className='mb-12'>
@@ -82,9 +87,9 @@ export default function Offices({ locations }) {
                     {errors.mensagem && <p className='mt-2 text-red'>{errors.mensagem}</p>}
                   </li>
                   <li>
-                    <button className='cursor-pointer font-bold bg-soft-blue px-12 py-4 rounded-full text-lg text-white' type='submit'>Enviar Mensagem</button>  
-                  </li>  
-                </ul> 
+                    <button className='cursor-pointer font-bold bg-soft-blue px-12 py-4 rounded-full text-lg text-white' type='submit'>Enviar Mensagem</button>
+                  </li>
+                </ul>
               </Form>
             )}
           </Formik>
@@ -102,7 +107,7 @@ export async function getStaticProps(context) {
   });
 
   const locations = data?.escritorios?.edges.map(({ node }) => node);
-  
+
   return {
     props: {
       locations
