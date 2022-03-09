@@ -1,17 +1,18 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ContainerWithBackgroundImage from '../components/ContainerWithBackgroundImage';
+import ContainerWithBackgroundVideo from '../components/ContainerWithBackgroundVideo';
 import OpenAccount from '../components/OpenAccount';
 
 export default function Advisor() {
   return (
     <>
       <Header />
-      <ContainerWithBackgroundImage uri='/bg-header-about.png'>
-        <div className='col-span-6 py-44'>
+      <ContainerWithBackgroundVideo uri='/advisor.mp4'>
+        <div className='col-span-5 py-44'>
           <h1 className='font-bold text-6xl text-white'>Não ter medo de sonhar alto. Essa é uma das sentenças que guia a equipe da Voga Invest.</h1>
         </div>
-        <div className='col-span-6 py-44'>
+        <div className='col-span-6 col-end-13 py-44'>
           <p className='text-xl text-white'>
             Carregamos no nosso DNA, e no nosso nome, a missão de caminhar lado a lado e direcionar para o melhor caminho. E, apesar de darmos o ritmo, nós colocamos você, seus objetivos e seus interesses pessoais sempre à frente. Somado a essa filosofia, a Voga Invest uniu um time de assessores altamente capacitados e chancelados pela XP Investimentos. Essa é a receita que vai garantir que seu patrimônio seja cuidado, aumentado e respeitado pelos profissionais mais atentos do mercado.
           </p>
@@ -25,7 +26,7 @@ export default function Advisor() {
             A Voga Invest une o tradicional ao contemporâneo alinhando as melhores estratégias e práticas atuais do mercado para garantir o melhor resultado para você.
           </p>
         </div>
-      </ContainerWithBackgroundImage>
+      </ContainerWithBackgroundVideo>
       <ContainerWithBackgroundImage uri='/bg-sucession.png'>
         <div className='col-span-5 py-32'>
           <h1 className='font-bold mb-12 text-4xl text-dark-gray'>Sucessão Patrimonial</h1>

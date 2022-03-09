@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { Container } from '../Guide';
 
@@ -8,39 +7,39 @@ export default function Footer() {
       <div className='bg-dark-blue py-40'>
         <Container>
           <div className="lg:col-span-4">
-            <Image
-              src="/logo.svg"
-              alt="Voga XP"
-              width={351}
-              height={86}
+            <img
+              src='/logo.svg'
+              alt='Voga Invest'
+              width='351'
+              height='86'
             />
           </div>
           <ul className='col-span-2 col-start-6'>
             <li>
-              <Link href='/'>
-                <a className='text-white'>Sobre a Voga</a>
+              <Link href='/about'>
+                <a className='text-white' title='Sobre a Voga'>Sobre a Voga</a>
               </Link>
             </li>
             <li className='my-8'>
-              <Link href='/'>
-                <a className='text-white'>Assessoria</a>
+              <Link href='/advisor'>
+                <a className='text-white' title='Assessoria'>Assessoria</a>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href='/'>
-                <a className='text-white'>Voga Insights</a>
+                <a className='text-white' title='Voga Insights'>Voga Insights</a>
               </Link>
-            </li>
+            </li> */}
           </ul>
           <ul className='col-span-2'>
             <li>
-              <Link href='/'>
-                <a className='text-white'>Contato</a>
+              <Link href='/offices'>
+                <a className='text-white' title='Nossos Escritórios'>Nossos Escritórios</a>
               </Link>
             </li>
             <li className='mt-8'>
-              <Link href='/'>
-                <a className='text-white'>Termos de uso</a>
+              <Link href='/contact'>
+                <a className='text-white' title='Contato'>Contato</a>
               </Link>
             </li>
           </ul>
@@ -48,42 +47,42 @@ export default function Footer() {
             <legend className='text-white mb-4'>Nossas redes:</legend>
             <ul className='flex flex-row justify-between'>
               <li>
-                <a href='#this' target='_blank' title='Instagram'>
-                  <Image
-                    src="/instagram.svg"
-                    alt="Instagram"
-                    width={42}
-                    height={42}
+                <a href='https://www.instagram.com/vogainvest/' target='_blank' title='Instagram'>
+                  <img
+                    src='/instagram.svg'
+                    alt='Instagram'
+                    width='42'
+                    height='42'
                   />
                 </a>
               </li>
               <li>
-                <a href='#this' target='_blank' title='Facebook'>
-                  <Image
-                    src="/facebook.svg"
-                    alt="Facebook"
-                    width={42}
-                    height={42}
+                <a href='https://www.facebook.com/vogainvest' target='_blank' title='Facebook'>
+                  <img
+                    src='/facebook.svg'
+                    alt='Facebook'
+                    width='42'
+                    height='42'
                   />
                 </a>
               </li>
               <li>
-                <a href='#this' target='_blank' title='LinkedIn'>
-                  <Image
-                    src="/linkedin.svg"
-                    alt="LinkedIn"
-                    width={42}
-                    height={42}
+                <a href='https://www.linkedin.com/company/vogainvest/' target='_blank' title='LinkedIn'>
+                  <img
+                    src='/linkedin.svg'
+                    alt='LinkedIn'
+                    width='42'
+                    height='42'
                   />
                 </a>
               </li>
               <li>
-                <a href='#this' target='_blank' title='YouTube'>
-                  <Image
-                    src="/youtube.svg"
-                    alt="YouTube"
-                    width={42}
-                    height={42}
+                <a href='https://www.youtube.com/channel/UC-QSaUjQOgNz6MdBUSt3rVg' target='_blank' title='YouTube'>
+                  <img
+                    src='/youtube.svg'
+                    alt='YouTube'
+                    width='42'
+                    height='42'
                   />
                 </a>
               </li>
@@ -96,17 +95,17 @@ export default function Footer() {
           <ul className='col-span-8 col-start-3 flex flex-row justify-between'>
             <li>
               <Link href='/'>
-                <a className='text-white'>Política de Privacidade</a>
+                <a className='text-white' title='Política de Privacidade'>Política de Privacidade</a>
               </Link>
             </li>
             <li>
               <Link href='/'>
-                <a className='text-white'>Termos e Condições</a>
+                <a className='text-white' title='Termos e Condições'>Termos e Condições</a>
               </Link>
             </li>
             <li>
               <Link href='/'>
-                <a className='text-white'>Política de Cookies</a>
+                <a className='text-white' title='Política de Cookies'>Política de Cookies</a>
               </Link>
             </li>
           </ul>

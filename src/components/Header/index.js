@@ -1,53 +1,51 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { Container } from '../Guide';
 
 export default function Header() {
   return (
-    <div className="bg-dark-blue py-8">
+    <div className='bg-dark-blue py-8'>
       <Container>
-        <div className="lg:col-span-3 flex items-stretch">
-          <Image
-            className="self-center"
-            src="/logo.svg"
-            alt="Voga XP"
-            width={264}
-            height={77}
+        <div className='lg:col-span-3 flex items-stretch'>
+          <img
+            src='/logo.svg'
+            alt='Voga Invest'
+            width='264'
+            height='77'
           />
         </div>
-        <ul className="lg:col-span-9 flex items-center justify-between">
+        <ul className='lg:col-span-9 flex items-center justify-between'>
           <li>
-            <Link href="/">
-              <a className="text-white hover:text-soft-blue">Home</a>
+            <Link href='/'>
+              <a className='text-white hover:text-soft-blue' title='Voga Invest'>Home</a>
             </Link>
           </li>
           <li>
-            <Link href="/about">
-              <a className="text-white hover:text-soft-blue">Sobre a Voga</a>
+            <Link href='/about'>
+              <a className='text-white hover:text-soft-blue' title='Sobre a Voga'>Sobre a Voga</a>
             </Link>
           </li>
           <li>
-            <Link href="/advisor">
-              <a className="text-white hover:text-soft-blue">Assessoria</a>
+            <Link href='/advisor'>
+              <a className='text-white hover:text-soft-blue' title='Assessoria'>Assessoria</a>
             </Link>
           </li>
           <li>
-            <Link href="/offices">
-              <a className="text-white hover:text-soft-blue">Nossos Escritórios</a>
+            <Link href='/offices'>
+              <a className='text-white hover:text-soft-blue' title='Nossos Escritórios'>Nossos Escritórios</a>
             </Link>
           </li>
           {/* <li>
-            <Link href="/">
-              <a className="text-white hover:text-soft-blue">Voga Insights</a>
+            <Link href='/'>
+              <a className='text-white hover:text-soft-blue' title='Voga Insights'>Voga Insights</a>
             </Link>
           </li> */}
           <li>
-            <Link href="/contact">
-              <a className="text-white hover:text-soft-blue">Contato</a>
+            <Link href='/contact'>
+              <a className='text-white hover:text-soft-blue' title='Contato'>Contato</a>
             </Link>
           </li>
           <li>
-            <a className="cursor-pointer font-bold bg-soft-blue px-6 py-4 rounded-full text-lg text-white uppercase" href="#this">Abra sua conta</a>
+            <a className='cursor-pointer font-bold bg-soft-blue px-6 py-4 rounded-full text-lg text-white uppercase' href='https://cadastro.xpi.com.br/desktop/step/1' target='_blank' title='Abra sua conta'>Abra sua conta</a>
           </li>
         </ul>
       </Container>

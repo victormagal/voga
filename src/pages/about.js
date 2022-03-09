@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import OurAdvisors from '../components/OurAdvisors';
 import ContainerWithBackgroundImage from '../components/ContainerWithBackgroundImage';
+import ContainerWithBackgroundVideo from '../components/ContainerWithBackgroundVideo';
 import Quality from '../components/Quality';
 import Prize from '../components/Prize';
 import Image from 'next/image';
@@ -12,7 +13,7 @@ export default function About({ qualities, prizes }) {
   return (
     <>
       <Header />
-      <ContainerWithBackgroundImage uri='/bg-header-about.png'>
+      <ContainerWithBackgroundVideo uri='/about.mp4'>
         <div className='col-span-6 py-44'>
           <h1 className='font-bold text-6xl text-white'>Nós sabemos quanto esforço é necessário para formar um bom patrimônio.</h1>
         </div>
@@ -30,7 +31,7 @@ export default function About({ qualities, prizes }) {
             Com a Voga como parceira, você está cada vez mais perto dos seus objetivos e cada vez sonhando mais alto.
           </p>
         </div>
-      </ContainerWithBackgroundImage>
+      </ContainerWithBackgroundVideo>
       <ContainerWithBackgroundImage uri='/bg-qualities-about.png'>
         <div className='col-span-6 flex flex-col justify-center'>
           <h1 className='font-bold mb-8 text-4xl text-dark-gray'>Nossos Valores</h1>

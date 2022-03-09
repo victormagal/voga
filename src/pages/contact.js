@@ -1,6 +1,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import ContainerWithBackgroundImage from '../components/ContainerWithBackgroundImage';
+import ContainerWithBackgroundVideo from '../components/ContainerWithBackgroundVideo';
 import OpenAccount from '../components/OpenAccount';
 import { getLocations } from '../utils/queries';
 import client from '../utils/client';
@@ -14,11 +14,11 @@ export default function Offices({ locations }) {
   return (
     <>
       <Header />
-      <ContainerWithBackgroundImage uri='/bg-header-contact.png'>
+      <ContainerWithBackgroundVideo uri='/contact.mp4'>
         <div className='col-span-6 py-56'>
           <h1 className='font-bold text-6xl text-white'>Fale com a VOGA</h1>
         </div>
-      </ContainerWithBackgroundImage>
+      </ContainerWithBackgroundVideo>
       <Container className='flex items-center py-48'>
         <div className='col-span-5'>
           <div className='flex'>

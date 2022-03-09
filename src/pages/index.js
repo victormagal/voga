@@ -4,20 +4,22 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import OpenAccount from '../components/OpenAccount';
 import ContainerWithBackgroundImage from '../components/ContainerWithBackgroundImage';
+import ContainerWithBackgroundVideo from '../components/ContainerWithBackgroundVideo';
 import Product from '../components/Product';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home({ products }) {
   return (
     <>
       <Header />
-      <ContainerWithBackgroundImage uri='/bg-header-home.png'>
+      <ContainerWithBackgroundVideo uri='/home.mp4'>
         <div className='col-span-6 col-start-4 flex flex-col items-center py-48'>
           <h1 className='font-bold text-5xl text-center text-white'>Invista agora e garanta o seu futuro</h1>
           <h2 className='my-11 text-xl text-center text-white'>Confie na autoridade de quem entende de verdade de investimento para conduzir você aos seus objetivos</h2>
-          <a className="bg-white block font-bold py-6 rounded-full text-center text-2xl text-soft-blue uppercase w-1/2" href='#this' title='Abra sua conta'>Abra sua conta</a>
+          <a className="bg-white block font-bold py-6 rounded-full text-center text-2xl text-soft-blue uppercase w-1/2" href='https://cadastro.xpi.com.br/desktop/step/1' target='_blank' title='Abra sua conta'>Abra sua conta</a>
         </div>
-      </ContainerWithBackgroundImage>
+      </ContainerWithBackgroundVideo>
       <ContainerWithBackgroundImage uri='/bg-about-voga.png'>
         <div className='col-span-5 col-start-8 py-32'>
           <h1 className='font-bold mb-12 text-4xl text-dark-gray'>Prazer, somos a Voga Invest, seu parceiro de investimentos</h1>
@@ -30,7 +32,9 @@ export default function Home({ products }) {
           <p className='font-bold mb-12'>
             Podemos ajudar você a chegar nos seus objetivos?
           </p>
-          <a className="bg-dark-gray block font-bold py-3 rounded-full text-center text-white uppercase w-1/2" href='#this' title='Abra sua conta'>Conheça a Voga Invest</a>
+          <Link href='/about'>
+            <a className="bg-dark-gray block font-bold py-3 rounded-full text-center text-white uppercase w-1/2" title='Conheça a Voga Invest'>Conheça a Voga Invest</a>
+          </Link>
         </div>
       </ContainerWithBackgroundImage>
       <ContainerWithBackgroundImage uri='/bg-products-home.png'>
@@ -38,7 +42,9 @@ export default function Home({ products }) {
           {products?.map(product => (
             <Product key={product.id} title={product.title} excerpt={product.excerpt} />
           ))}
-          <a className="bg-soft-blue block font-bold py-3 rounded-full self-center text-center text-xl text-white uppercase w-5/12" href='#this' title='Abra sua conta'>Conheça a assessoria da Voga</a>
+          <Link href='/advisor'>
+            <a className="bg-soft-blue block font-bold py-3 rounded-full self-center text-center text-xl text-white uppercase w-5/12"  title='Conheça a assessoria da Voga'>Conheça a assessoria da Voga</a>
+          </Link>
         </div>
       </ContainerWithBackgroundImage>
       <ContainerWithBackgroundImage uri='/bg-profiles-home.png'>

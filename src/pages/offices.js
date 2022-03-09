@@ -1,6 +1,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import ContainerWithBackgroundImage from '../components/ContainerWithBackgroundImage';
+import ContainerWithBackgroundVideo from '../components/ContainerWithBackgroundVideo';
 import OpenAccount from '../components/OpenAccount';
 import { getOffices } from '../utils/queries';
 import client from '../utils/client';
@@ -11,7 +11,7 @@ export default function Offices({ offices }) {
   return (
     <>
       <Header />
-      <ContainerWithBackgroundImage uri='/bg-header-offices.png'>
+      <ContainerWithBackgroundVideo uri='/offices.mp4'>
         <div className='col-span-6 pt-44 pb-96'>
           <h1 className='font-bold text-6xl text-white'>Cuidar do seu patrimônio é coisa séria.</h1>
         </div>
@@ -24,13 +24,13 @@ export default function Offices({ offices }) {
           </p>
           <a className="bg-white block font-bold mt-12 py-6 rounded-full text-center text-2xl text-soft-blue uppercase w-1/2" href='#this' title='Abra sua conta'>CTA de visita</a>
         </div>
-      </ContainerWithBackgroundImage>
+      </ContainerWithBackgroundVideo>
       <Container className='mb-16 -mt-64 relative z-20'>
         <div className='col-span-12'>
           <img
             alt='Escritórios'
             className='w-full h-auto'
-            src=' /bg-map.png'
+            src=' /map.png'
           />
         </div>
       </Container>
