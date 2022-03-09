@@ -9,8 +9,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
+import { Router, useRouter } from 'next/router';
 
 export default function Offices({ locations }) {
+  const router = useRouter();
+
   return (
     <>
       <Header />
@@ -63,7 +66,7 @@ export default function Offices({ locations }) {
                 method: 'POST',
                 body: JSON.stringify(values)
               }).then(res => {
-                res.status === 200 ? console.log('Email enviado') : console.log('Ocorreu algum erro, tente novamente mais tarde');
+                res.status === 200 ? router.push('/mail-success') : router.push('/mail-fail');
               })
             }}
           >

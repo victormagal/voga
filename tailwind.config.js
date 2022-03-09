@@ -16,8 +16,14 @@ module.exports = {
       'baby-red': '#F7A8A8'
     },
     extend: {
+      backgroundImage: {
+        'mail-response': "url('/bg-mail.png')"
+      },
       fontFamily: {
         'sans': ['Montserrat', ...defaultTheme.fontFamily.sans]
+      },
+      margin: {
+        'mail': '20.9rem'
       }
     },
   },
