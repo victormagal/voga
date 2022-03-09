@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { Container } from '../Guide';
 
 export default function ContainerWithBackgroundImage({ uri, children }) {
   return (
@@ -12,9 +11,9 @@ export default function ContainerWithBackgroundImage({ uri, children }) {
         objectFit='cover'
         objectPosition='center'
       />
-      <Container className='relative z-10'>
+      <div className='relative z-10'>
         {children}
-      </Container>
+      </div>
     </div>
   );
 }

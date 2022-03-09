@@ -4,7 +4,7 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 export default function Office({ id, title, summary, sourceImg, label, link }) {
   return (
-    <Container key={id} className="bg-baby-blue flex items-center mb-16 p-16 rounded-3xl">
+    <Container key={id} newClasses="bg-baby-blue flex items-center mb-16 p-16 rounded-3xl">
       <div className='col-span-5'>
         <h1 className='font-bold text-dark-gray text-6xl'>{title}</h1>
         <div className='flex my-12'>

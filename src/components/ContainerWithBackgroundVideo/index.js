@@ -1,5 +1,3 @@
-import { Container } from '../Guide';
-
 export default function ContainerWithBackgroundVideo({ uri, children }) {
   return (
     <div className='relative'>
@@ -11,9 +9,9 @@ export default function ContainerWithBackgroundVideo({ uri, children }) {
       >
         <source src={uri} type='video/mp4' />
       </video>
-      <Container className='relative z-10'>
+      <div className='relative z-10'>
         {children}
-      </Container>
+      </div>
     </div>
   );
 }

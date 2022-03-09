@@ -1,5 +1,7 @@
-import styled from "styled-components";
-
-export const Container = styled.div.attrs({
-  className: 'lg:container lg:mx-auto grid lg:grid-cols-12 grid-cols-4 gap-4'
-})``;
+export function Container({ children, newClasses }) {
+  return (
+    <div className={`${newClasses && newClasses} container grid grid-cols-12 gap-4 mx-auto`}>
+      {children}
+    </div>
+  );
+}

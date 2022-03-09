@@ -15,11 +15,13 @@ export default function Offices({ locations }) {
     <>
       <Header />
       <ContainerWithBackgroundVideo uri='/contact.mp4'>
-        <div className='col-span-6 py-56'>
-          <h1 className='font-bold text-6xl text-white'>Fale com a VOGA</h1>
-        </div>
+        <Container>
+          <div className='col-span-6 py-56'>
+            <h1 className='font-bold text-6xl text-white'>Fale com a VOGA</h1>
+          </div>
+        </Container>
       </ContainerWithBackgroundVideo>
-      <Container className='flex items-center py-48'>
+      <Container newClasses='flex items-center py-48'>
         <div className='col-span-5'>
           <div className='flex'>
             <FontAwesomeIcon className='mr-4 pt-2' icon={faPhone} />

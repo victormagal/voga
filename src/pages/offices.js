@@ -12,20 +12,22 @@ export default function Offices({ offices }) {
     <>
       <Header />
       <ContainerWithBackgroundVideo uri='/offices.mp4'>
-        <div className='col-span-6 pt-44 pb-96'>
-          <h1 className='font-bold text-6xl text-white'>Cuidar do seu patrimônio é coisa séria.</h1>
-        </div>
-        <div className='col-span-6 pt-44 pb-96'>
-          <p className='text-xl text-white'>
-            Por isso a Voga Invest mostra o respeito pelo seu investimento desde o primeiro contato. Nossos escritórios possuem estrutura robusta e moderna para receber bem você e para garantir que cuida do seu dinheiro trabalhe com a melhor condição para gerar melhores resultados. 
-          </p>
-          <p className='mt-8 text-xl text-white'>
-            Atualmente a Voga Invest possuí 4 escritórios, sediados em Brasília, Goiânia e Belo Horizonte e Itajaí. Nosso quinto escritório começará em breve a funcionar em São Paulo.
-          </p>
-          <a className="bg-white block font-bold mt-12 py-6 rounded-full text-center text-2xl text-soft-blue uppercase w-1/2" href='#this' title='Abra sua conta'>CTA de visita</a>
-        </div>
+        <Container>
+          <div className='col-span-6 pt-44 pb-96'>
+            <h1 className='font-bold text-6xl text-white'>Cuidar do seu patrimônio é coisa séria.</h1>
+          </div>
+          <div className='col-span-6 pt-44 pb-96'>
+            <p className='text-xl text-white'>
+              Por isso a Voga Invest mostra o respeito pelo seu investimento desde o primeiro contato. Nossos escritórios possuem estrutura robusta e moderna para receber bem você e para garantir que cuida do seu dinheiro trabalhe com a melhor condição para gerar melhores resultados. 
+            </p>
+            <p className='mt-8 text-xl text-white'>
+              Atualmente a Voga Invest possuí 4 escritórios, sediados em Brasília, Goiânia e Belo Horizonte e Itajaí. Nosso quinto escritório começará em breve a funcionar em São Paulo.
+            </p>
+            <a className="bg-white block font-bold mt-12 py-6 rounded-full text-center text-2xl text-soft-blue uppercase w-1/2" href='#this' title='Abra sua conta'>CTA de visita</a>
+          </div>
+        </Container>
       </ContainerWithBackgroundVideo>
-      <Container className='mb-16 -mt-64 relative z-20'>
+      <Container newClasses='mb-16 -mt-64 relative z-20'>
         <div className='col-span-12'>
           <img
             alt='Escritórios'
