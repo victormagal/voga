@@ -47,7 +47,7 @@ export default function Footer() {
             <legend className='text-white mb-4'>Nossas redes:</legend>
             <ul className='flex flex-row justify-between'>
               <li>
-                <a href='https://www.instagram.com/vogainvest/' target='_blank' title='Instagram'>
+                <a href='https://www.instagram.com/vogainvest/' target='_blank' rel='noreferrer' title='Instagram'>
                   <img
                     src='/instagram.svg'
                     alt='Instagram'
@@ -57,7 +57,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href='https://www.facebook.com/vogainvest' target='_blank' title='Facebook'>
+                <a href='https://www.facebook.com/vogainvest' target='_blank' rel='noreferrer' title='Facebook'>
                   <img
                     src='/facebook.svg'
                     alt='Facebook'
@@ -67,7 +67,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href='https://www.linkedin.com/company/vogainvest/' target='_blank' title='LinkedIn'>
+                <a href='https://www.linkedin.com/company/vogainvest/' target='_blank' rel='noreferrer' title='LinkedIn'>
                   <img
                     src='/linkedin.svg'
                     alt='LinkedIn'
@@ -77,7 +77,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href='https://www.youtube.com/channel/UC-QSaUjQOgNz6MdBUSt3rVg' target='_blank' title='YouTube'>
+                <a href='https://www.youtube.com/channel/UC-QSaUjQOgNz6MdBUSt3rVg' target='_blank' rel='noreferrer' title='YouTube'>
                   <img
                     src='/youtube.svg'
                     alt='YouTube'

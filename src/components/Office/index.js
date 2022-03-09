@@ -11,7 +11,7 @@ export default function Office({ id, title, summary, sourceImg, label, link }) {
           <FontAwesomeIcon className='mr-4 pt-2' icon={faLocationDot} />
           <p className='text-2xl'>{summary}</p>
         </div>
-        <a className="bg-white block font-bold py-6 rounded-full text-center text-2xl text-soft-blue uppercase w-1/2" href={link} title={label} target='_blank'>{label}</a>
+        <a className="bg-white block font-bold py-6 rounded-full text-center text-2xl text-soft-blue uppercase w-1/2" href={link} title={label} target='_blank' rel='noreferrer'>{label}</a>
       </div>
       <div className="col-span-5 col-end-13">
         <img src={sourceImg} alt={title} className='w-full h-auto' />

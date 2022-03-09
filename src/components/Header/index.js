@@ -45,7 +45,7 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <a className='cursor-pointer font-bold bg-soft-blue px-6 py-4 rounded-full text-lg text-white uppercase' href='https://cadastro.xpi.com.br/desktop/step/1' target='_blank' title='Abra sua conta'>Abra sua conta</a>
+            <a className='cursor-pointer font-bold bg-soft-blue px-6 py-4 rounded-full text-lg text-white uppercase' href='https://cadastro.xpi.com.br/desktop/step/1' target='_blank' rel='noreferrer' title='Abra sua conta'>Abra sua conta</a>
           </li>
         </ul>
       </Container>
