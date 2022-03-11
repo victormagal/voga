@@ -40,10 +40,11 @@ export default function About({ qualities, prizes }) {
           <div className='col-span-6 flex flex-col justify-center'>
             <h1 className='font-bold mb-8 text-4xl text-dark-gray'>Nossos Valores</h1>
             <Image
-              src="/qualities-about.png"
               alt="Nossos Valores"
-              width={582}
               height={369}
+              quality={100}
+              src="/qualities-about.png"
+              width={582}
             />
           </div>
           <div className='col-span-6 py-40'>

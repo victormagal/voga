@@ -68,10 +68,11 @@ export default function Home({ products }) {
           <div className='col-span-5 col-start-8 py-32'>
             <div className='bg-dark-blue flex items-center p-8 rounded-3xl'>
               <Image
-                src="/voga-digital-icon.svg"
                 alt="Voga Digital"
-                width={108}
                 height={118}
+                quality={100}
+                src="/voga-digital-icon.svg"
+                width={108}
               />
               <div className='ml-12'>
                 <h1 className='mb-4 text-4xl text-white'>Voga Digital</h1>
@@ -80,10 +81,11 @@ export default function Home({ products }) {
             </div>
             <div className='bg-dark-blue flex items-center mt-12 p-8 rounded-3xl'>
               <Image
-                src="/voga-private-icon.svg"
-                alt="Voga Digital"
-                width={108}
+                alt="Voga Private"
                 height={118}
+                quality={100}
+                src="/voga-private-icon.svg"
+                width={108}
               />
               <div className='ml-12'>
                 <h1 className='mb-4 text-4xl text-white'>Voga Private</h1>
