@@ -6,7 +6,6 @@ import { getOffices } from '../utils/queries';
 import client from '../utils/client';
 import { Container } from '../components/Guide';
 import Office from '../components/Office';
-import Image from 'next/image';
 
 export default function Offices({ offices }) {
   return (

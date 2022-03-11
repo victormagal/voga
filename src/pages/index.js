@@ -19,7 +19,9 @@ export default function Home({ products }) {
           <div className='col-span-6 col-start-4 flex flex-col items-center py-48'>
             <h1 className='font-bold text-5xl text-center text-white'>Invista agora e garanta o seu futuro</h1>
             <h2 className='my-11 text-xl text-center text-white'>Confie na autoridade de quem entende de verdade de investimento para conduzir você aos seus objetivos</h2>
-            <a className="bg-white block font-bold py-6 rounded-full text-center text-2xl text-soft-blue uppercase w-1/2" href='https://cadastro.xpi.com.br/desktop/step/1' target='_blank' rel='noreferrer' title='Abra sua conta'>Abra sua conta</a>
+            <Link href='/open_account'>
+              <a className="bg-white block font-bold py-6 rounded-full text-center text-2xl text-soft-blue uppercase w-1/2" title='Abra sua conta'>Abra sua conta</a>
+            </Link>
           </div>
         </Container>
       </ContainerWithBackgroundVideo>
@@ -111,6 +113,7 @@ export async function getStaticProps(context) {
   return {
     props: {
       products
-    }
+    },
+    revalidate: 600
   }
 }
