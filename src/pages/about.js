@@ -16,10 +16,10 @@ export default function About({ qualities, prizes }) {
       <Header />
       <ContainerWithBackgroundVideo uri='/about.mp4'>
         <Container>
-          <div className='col-span-6 py-44'>
+          <div className='lg:col-span-6 col-span-4 lg:py-44 pt-44'>
             <h1 className='font-bold text-6xl text-white'>Nós sabemos quanto esforço é necessário para formar um bom patrimônio.</h1>
           </div>
-          <div className='col-span-6 py-44'>
+          <div className='lg:col-span-6 col-span-4 lg:py-44 pb-44'>
             <p className='text-xl text-white'>
               E assim como você, jamais deixaríamos o fruto de tanto trabalho nas mãos de qualquer pessoa para cuidar.   
             </p>
@@ -37,7 +37,7 @@ export default function About({ qualities, prizes }) {
       </ContainerWithBackgroundVideo>
       <ContainerWithBackgroundImage uri='/bg-qualities-about.png'>
         <Container>
-          <div className='col-span-6 flex flex-col justify-center'>
+          <div className='lg:col-span-6 col-span-4 flex flex-col justify-center lg:pt-0 pt-40'>
             <h1 className='font-bold mb-8 text-4xl text-dark-gray'>Nossos Valores</h1>
             <Image
               alt="Nossos Valores"
@@ -47,7 +47,7 @@ export default function About({ qualities, prizes }) {
               width={582}
             />
           </div>
-          <div className='col-span-6 py-40'>
+          <div className='lg:col-span-6 col-span-4 lg:py-40 pb-40'>
             {qualities?.map(quality => (
               <Quality key={quality.id} title={quality.title} excerpt={quality.excerpt} />
             ))}
@@ -57,7 +57,7 @@ export default function About({ qualities, prizes }) {
       <ContainerWithBackgroundImage uri='/bg-prizes-about.png'>
         <Container>
           <h1 className='font-bold mb-4 pt-32 text-4xl text-white'>Prêmios</h1>
-          <div className='col-span-12 pb-32 grid grid-cols-12 gap-4'>
+          <div className='lg:col-span-12 col-span-4 pb-32 grid lg:grid-cols-12 grid-cols-4 gap-4'>
             {prizes?.map(prize => (
               <Prize key={prize.id} title={prize.title} source={prize.featuredImage.node.sourceUrl} />
             ))}
