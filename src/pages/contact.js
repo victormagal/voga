@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Image from 'next/image';
 import ContainerWithBackgroundVideo from '../components/ContainerWithBackgroundVideo';
 import OpenAccount from '../components/OpenAccount';
 import { getLocations } from '../utils/queries';
@@ -9,23 +11,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
-import { Router, useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 
 export default function Offices({ locations }) {
   const router = useRouter();
+  const [formLoader, setFormLoader] = useState(false);
 
   return (
     <>
       <Header />
       <ContainerWithBackgroundVideo uri='/contact.mp4'>
         <Container>
-          <div className='col-span-6 py-56'>
+          <div className='lg:col-span-6 col-span-4 py-56'>
             <h1 className='font-bold text-6xl text-white'>Fale com a VOGA</h1>
           </div>
         </Container>
       </ContainerWithBackgroundVideo>
-      <Container newClasses='flex items-center py-48'>
-        <div className='col-span-5'>
+      <Container newClasses='py-48'>
+        <div className='lg:col-span-5 col-span-4 lg:mb-0 mb-12'>
           <div className='flex'>
             <FontAwesomeIcon className='mr-4 pt-2' icon={faPhone} />
             <p className='text-2xl'>
@@ -47,7 +50,7 @@ export default function Offices({ locations }) {
             </div>
           ))}
         </div>
-        <div className='col-span-6 col-end-13'>
+        <div className='lg:col-span-6 col-span-4 lg:col-end-13'>
           <Formik
             initialValues={{
               nome: '',
@@ -62,6 +65,7 @@ export default function Offices({ locations }) {
               mensagem: Yup.string().required('Campo obrigatório')
             })}
             onSubmit={async values => {
+              setFormLoader(true);
               fetch('/api/mail', {
                 method: 'POST',
                 body: JSON.stringify(values)
@@ -90,7 +94,21 @@ export default function Offices({ locations }) {
                     {errors.mensagem && <p className='mt-2 text-red'>{errors.mensagem}</p>}
                   </li>
                   <li>
-                    <button className='cursor-pointer font-bold bg-soft-blue px-12 py-4 rounded-full text-lg text-white' type='submit'>Enviar Mensagem</button>
+                    <button 
+                      className='cursor-pointer flex items-center font-bold bg-soft-blue px-12 py-4 rounded-full text-lg text-white' 
+                      type='submit'
+                    >
+                      {formLoader &&
+                        <Image
+                          alt='Carregando'
+                          height={50}
+                          quality={100}
+                          src='/loader.svg'
+                          width={50}
+                        />
+                      }
+                      Enviar Mensagem
+                    </button>
                   </li>
                 </ul>
               </Form>

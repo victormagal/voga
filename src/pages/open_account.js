@@ -9,13 +9,13 @@ export default function Offices() {
       <Header />
       <ContainerWithBackgroundVideo uri='/home.mp4'>
         <Container>
-          <div className='col-span-6 py-60'>
+          <div className='lg:col-span-6 col-span-4 py-60'>
             <h1 className='font-bold text-6xl text-white'>Abra sua conta!</h1>
           </div>
         </Container>
       </ContainerWithBackgroundVideo>
       <Container newClasses='mb-16 -mt-32 relative z-20'>
-        <div className='col-span-12'>
+        <div className='lg:col-span-12 col-span-4'>
           <iframe className='w-full' height={1200} src="https://cadastro.xpi.com.br/desktop/step/1" title="Abra sua conta"></iframe>
         </div>
       </Container>

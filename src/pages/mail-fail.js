@@ -9,7 +9,7 @@ export default function Offices() {
       <Header />
       <div className='bg-bottom bg-mail-response bg-no-repeat -my-mail'>
         <Container newClasses='h-screen flex items-center'>
-          <div className='col-span-4 col-start-5'>
+          <div className='col-span-4 lg:col-start-5'>
             <h1 className='font-bold mb-6 text-5xl text-dark-gray text-center uppercase'>Tente mais tarde.</h1>
             <p className='text-2xl text-center'>Infelizmente sua solicitação não foi completada.</p>  
           </div>
