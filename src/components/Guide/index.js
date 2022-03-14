@@ -1,6 +1,6 @@
 export function Container({ children, newClasses }) {
   return (
-    <div className={`${newClasses && newClasses} container grid grid-cols-12 gap-4 mx-auto`}>
+    <div className={`container grid lg:grid-cols-12 grid-cols-4 gap-4 mx-auto px-4 ${newClasses ? newClasses : ''}`}>
       {children}
     </div>
   );

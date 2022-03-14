@@ -7,9 +7,9 @@ export default function ContainerWithBackgroundImage({ uri, children }) {
         alt='Background Image'
         className='z-0'
         layout='fill'
-        quality={100}
         objectFit='cover'
         objectPosition='center'
+        quality={100}
         src={uri}
       />
       <div className='relative z-10'>

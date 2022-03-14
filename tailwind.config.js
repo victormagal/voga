@@ -22,6 +22,9 @@ module.exports = {
       fontFamily: {
         'sans': ['Montserrat', ...defaultTheme.fontFamily.sans]
       },
+      height: {
+        'image': '50rem'
+      },
       margin: {
         'mail': '20.9rem'
       }

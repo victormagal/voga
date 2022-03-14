@@ -1,26 +1,28 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { Container } from '../Guide';
 
 export default function Footer() {
   return (
     <>
-      <div className='bg-dark-blue py-40'>
+      <div className='bg-dark-blue lg:py-40 py-20'>
         <Container>
-          <div className="lg:col-span-4">
-            <img
-              src='/logo.svg'
+          <div className='col-span-4'>
+            <Image
               alt='Voga Invest'
-              width='351'
-              height='86'
+              height={86}
+              quality={100}
+              src='/logo.svg'
+              width={351}
             />
           </div>
-          <ul className='col-span-2 col-start-6'>
+          <ul className='lg:col-span-2 col-span-4 lg:col-start-6 flex flex-col lg:items-start items-center space-y-4'>
             <li>
               <Link href='/about'>
                 <a className='text-white' title='Sobre a Voga'>Sobre a Voga</a>
               </Link>
             </li>
-            <li className='my-8'>
+            <li>
               <Link href='/advisor'>
                 <a className='text-white' title='Assessoria'>Assessoria</a>
               </Link>
@@ -31,7 +33,7 @@ export default function Footer() {
               </Link>
             </li> */}
           </ul>
-          <ul className='col-span-2'>
+          <ul className='lg:col-span-2 col-span-4 flex flex-col lg:items-start items-center space-y-4'>
             <li>
               <Link href='/offices'>
                 <a className='text-white' title='Nossos Escritórios'>Nossos Escritórios</a>
@@ -43,9 +45,9 @@ export default function Footer() {
               </Link>
             </li>
           </ul>
-          <div className='col-span-2 col-start-11'>
-            <legend className='text-white mb-4'>Nossas redes:</legend>
-            <ul className='flex flex-row justify-between'>
+          <div className='lg:col-span-2 col-span-4 lg:col-end-13'>
+            <legend className='text-white mb-4 lg:text-left text-center'>Nossas redes:</legend>
+            <ul className='flex flex-row lg:justify-between justify-around'>
               <li>
                 <a href='https://www.instagram.com/vogainvest/' target='_blank' rel='noreferrer' title='Instagram'>
                   <img
@@ -92,7 +94,7 @@ export default function Footer() {
       </div>
       <div className='bg-soft-blue py-8'>
         <Container>
-          <ul className='col-span-8 col-start-3 flex flex-row justify-between'>
+          <ul className='lg:col-span-8 col-span-4 lg:col-start-3 flex lg:flex-row flex-col items-center space-y-4 justify-between'>
             <li>
               <Link href='/'>
                 <a className='text-white' title='Política de Privacidade'>Política de Privacidade</a>
