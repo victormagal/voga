@@ -1,6 +1,5 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import ContainerWithBackgroundImage from '../components/ContainerWithBackgroundImage';
 import ContainerWithBackgroundVideo from '../components/ContainerWithBackgroundVideo';
 import ContainerImageAndContent from '../components/ContainerImageAndContent';
 import OpenAccount from '../components/OpenAccount';
