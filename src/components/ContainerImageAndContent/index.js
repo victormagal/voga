@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
-export default function ContainerImageAndContent({ uri, children }) {
+export default function ContainerImageAndContent({ uri, children, reversed }) {
   return (
-    <div className='flex lg:flex-row flex-col items-center'>
+    <div className={`flex ${reversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} flex-col items-center`}>
       <div className='relative h-image lg:w-1/2 w-full'>
         <Image
           alt='Prazer, somos a Voga Invest, seu parceiro de investimentos'
