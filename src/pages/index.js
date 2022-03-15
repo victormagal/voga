@@ -10,6 +10,7 @@ import Product from '../components/Product';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Container } from '../components/Guide';
+import Slider from '../components/Slider';
 
 export default function Home({ products }) {
   return (
@@ -94,6 +95,11 @@ export default function Home({ products }) {
           </div>
         </Container>
       </ContainerWithBackgroundImage>
+      <div className='bg-soft-blue'>
+        <Container newClasses='py-44'>
+          <Slider />
+        </Container>
+      </div>
       <OpenAccount />
       <Footer />
     </>
