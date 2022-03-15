@@ -95,11 +95,11 @@ export default function Home({ products }) {
           </div>
         </Container>
       </ContainerWithBackgroundImage>
-      <div className='bg-soft-blue'>
+      {/* <div className='bg-soft-blue'>
         <Container newClasses='py-44'>
           <Slider />
         </Container>
-      </div>
+      </div> */}
       <OpenAccount />
       <Footer />
     </>
