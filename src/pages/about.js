@@ -64,6 +64,68 @@ export default function About({ qualities, prizes }) {
           </div>
         </Container>
       </ContainerWithBackgroundImage>
+      {/* <div>
+        <Container newClasses='py-44'>
+          <h1 className='sm:col-span-12 col-span-4 font-bold pb-12 text-5xl text-dark-gray'>Timeline Voga</h1>
+          <div className='sm:col-span-12 col-span-4 flex sm:flex-col flex-row'>
+            <div className='bg-soft-blue sm:h-5 h-full sm:mt-0 sm:w-full w-4 rounded-full'></div>
+            <div className='flex sm:flex-row flex-col sm:justify-around sm:ml-0 -ml-6 sm:-mt-9 w-full'>
+              <div className='cursor-pointer flex sm:flex-col flex-row items-center sm:py-0 py-6'>
+                <div className='bg-dark-blue sm:h-12 h-8 sm:mb-6 rounded-full sm:w-12 w-8'></div>
+                <div className='ml-4 sm:ml-0'>
+                  <p className='font-bold sm:text-4xl text-2xl text-dark-blue'>2017</p>
+                </div>
+              </div>
+              <div className='cursor-pointer flex sm:flex-col flex-row items-center sm:py-0 py-6'>
+                <div className='bg-dark-blue sm:h-12 h-8 sm:mb-6 rounded-full sm:w-12 w-8'></div>
+                <div className='ml-4 sm:ml-0'>
+                  <p className='font-bold sm:text-4xl text-2xl text-dark-blue'>2018</p>
+                </div>
+              </div>
+              <div className='cursor-pointer flex sm:flex-col flex-row items-center sm:py-0 py-6'>
+                <div className='bg-dark-blue sm:h-12 h-8 sm:mb-6 rounded-full sm:w-12 w-8'></div>
+                <div className='ml-4 sm:ml-0'>
+                  <p className='font-bold sm:text-4xl text-2xl text-dark-blue'>2019</p>
+                </div>
+              </div>
+              <div className='cursor-pointer flex sm:flex-col flex-row items-center sm:py-0 py-6'>
+                <div className='bg-dark-blue sm:h-12 h-8 sm:mb-6 rounded-full sm:w-12 w-8'></div>
+                <div className='ml-4 sm:ml-0'>
+                  <p className='font-bold sm:text-4xl text-2xl text-dark-blue'>2020</p>
+                </div>
+              </div>
+              <div className='cursor-pointer flex sm:flex-col flex-row items-center sm:py-0 py-6'>
+                <div className='bg-dark-blue sm:h-12 h-8 sm:mb-6 rounded-full sm:w-12 w-8'></div>
+                <div className='ml-4 sm:ml-0'>
+                  <p className='font-bold sm:text-4xl text-2xl text-dark-blue'>2021</p>
+                </div>
+              </div>
+              <div className='cursor-pointer flex sm:flex-col flex-row items-center sm:py-0 py-6'>
+                <div className='bg-dark-blue sm:h-12 h-8 sm:mb-6 rounded-full sm:w-12 w-8'></div>
+                <div className='ml-4 sm:ml-0'>
+                  <p className='font-bold sm:text-4xl text-2xl text-dark-blue'>2022</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='sm:col-span-12 col-span-4 grid sm:grid-cols-12 grid-cols-4 gap-4 sm:mt-24 mt-8'>
+            <div className='sm:col-span-5 col-span-4'>
+              <Image
+                alt='Timeline Voga'
+                height={411}
+                quality={100}
+                src='/timeline.png'
+                width={641}
+              />
+            </div>
+            <div className='sm:col-span-6 col-span-4 sm:col-end-13 flex items-center'>
+              <p className='text-2xl'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel tellus lacinia, bibendum nulla nec, pretium nisi. Curabitur consequat tempus massa egestas cursus. 
+              </p>
+            </div>
+          </div>
+        </Container>
+      </div> */}
       <OurAdvisors />
       <Footer />
     </>
