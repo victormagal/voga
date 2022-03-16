@@ -99,7 +99,13 @@ export default function Home({ products }) {
         <Container newClasses='py-44'>
           <Slider />
         </Container>
-      </div> */}
+      </div>
+      <ContainerWithBackgroundImage uri='/bg-midia.png'>
+        <Container newClasses='py-44'>
+          <h1 className='lg:col-span-12 col-span-4 font-bold pb-24 text-5xl text-center text-dark-gray'>Voga na Mídia</h1>
+          <Slider />
+        </Container>
+      </ContainerWithBackgroundImage> */}
       <OpenAccount />
       <Footer />
     </>

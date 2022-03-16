@@ -15,22 +15,26 @@ export default function Slider() {
 
 	return (
 		<>
-			<div className='col-span-1 flex items-center justify-start'>
+			<div className='col-span-1 lg:flex hidden items-center justify-start'>
 				<Button direction='prev' moveSlide={prevSlide} />
 			</div>
-			<div className='col-span-10 h-48 overflow-hidden relative'>
-				<div>
+			<div className='lg:col-span-10 col-span-4 lg:h-48 h-64 relative'>
+				<div className='h-full relative w-full'>
 					{dataSlider.map((obj, index) => {
 						return (
-							<div key={obj.id} className={slideIndex === index + 1 ? 'absolute duration-1000 h-full opacity-100 transition-opacity w-full' : 'absolute duration-1000 h-full opacity-0 transition-opacity w-full'}>
-								<p className='text-3xl text-center text-dark-gray'>{obj.comment}</p>
-								<p className='font-bold mt-8 text-2xl text-center text-white'>{obj.author}</p>
+							<div key={obj.id} className={slideIndex === index + 1 ? 'absolute duration-1000 opacity-100 transition-opacity' : 'absolute duration-1000 opacity-0 transition-opacity'}>
+								<p className='lg:text-3xl text-xl text-center text-dark-gray'>{obj.comment}</p>
+								<p className='font-bold mt-8 lg:text-2xl text-base text-center text-white'>{obj.author}</p>
 							</div>
 						);
 					})}
 				</div>
+        <div className='flex space-x-20 justify-center lg:hidden relative'>
+          <Button direction='prev' moveSlide={prevSlide} />
+          <Button direction='next' moveSlide={nextSlide} />
+        </div>
 			</div>
-			<div className='col-span-1 flex items-center justify-end'>
+			<div className='col-span-1 lg:flex hidden items-center justify-end'>
 				<Button direction='next' moveSlide={nextSlide} />
 			</div>
 		</>
