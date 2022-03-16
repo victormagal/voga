@@ -12,6 +12,7 @@ import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-
 import { Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import { useRouter } from 'next/router';
+import { maskPhoneNumber } from '../utils/masks'
 
 export default function Offices({ locations }) {
   const router = useRouter();
@@ -78,19 +79,42 @@ export default function Offices({ locations }) {
               <Form>
                 <ul className='flex flex-col'>
                   <li className='mb-12'>
-                    <Field className={`${errors.nome ? 'bg-baby-red' : 'bg-baby-blue'} font-medium placeholder:text-dark-blue p-8 rounded-3xl text-2xl text-dark-blue w-full`} name='nome' placeholder='Nome' type='text' value={values.nome} />
+                    <Field 
+                      className={`${errors.nome ? 'bg-baby-red' : 'bg-baby-blue'} font-medium placeholder:text-dark-blue p-8 rounded-3xl text-2xl text-dark-blue w-full`} 
+                      name='nome' 
+                      placeholder='Nome' 
+                      type='text' 
+                      value={values.nome} 
+                    />
                     {errors.nome && <p className='mt-2 text-red'>{errors.nome}</p>}
                   </li>
                   <li className='mb-12'>
-                    <Field className={`${errors.email ? 'bg-baby-red' : 'bg-baby-blue'} font-medium placeholder:text-dark-blue p-8 rounded-3xl text-2xl text-dark-blue w-full`} name='email' placeholder='E-mail' type='email' value={values.email} />
+                    <Field 
+                      className={`${errors.email ? 'bg-baby-red' : 'bg-baby-blue'} font-medium placeholder:text-dark-blue p-8 rounded-3xl text-2xl text-dark-blue w-full`} 
+                      name='email' 
+                      placeholder='E-mail' 
+                      type='email' 
+                      value={values.email} 
+                    />
                     {errors.email && <p className='mt-2 text-red'>{errors.email}</p>}
                   </li>
                   <li className='mb-12'>
-                    <Field className={`${errors.telefone ? 'bg-baby-red' : 'bg-baby-blue'} font-medium placeholder:text-dark-blue p-8 rounded-3xl text-2xl text-dark-blue w-full`} name='telefone' placeholder='Telefone' type='text' value={values.telefone} />
+                    <Field 
+                      className={`${errors.telefone ? 'bg-baby-red' : 'bg-baby-blue'} font-medium placeholder:text-dark-blue p-8 rounded-3xl text-2xl text-dark-blue w-full`} 
+                      name='telefone' 
+                      placeholder='Telefone' 
+                      type='text' 
+                      value={maskPhoneNumber(values.telefone)} 
+                    />
                     {errors.telefone && <p className='mt-2 text-red'>{errors.telefone}</p>}
                   </li>
                   <li className='mb-12'>
-                    <Field as='textarea' className={`${errors.mensagem ? 'bg-baby-red' : 'bg-baby-blue'} font-medium h-56 placeholder:text-dark-blue p-8 rounded-3xl text-2xl text-dark-blue w-full`} name='mensagem' placeholder='Mensagem' value={values.mensagem} />
+                    <Field as='textarea' 
+                      className={`${errors.mensagem ? 'bg-baby-red' : 'bg-baby-blue'} font-medium h-56 placeholder:text-dark-blue p-8 rounded-3xl text-2xl text-dark-blue w-full`} 
+                      name='mensagem' 
+                      placeholder='Mensagem' 
+                      value={values.mensagem} 
+                    />
                     {errors.mensagem && <p className='mt-2 text-red'>{errors.mensagem}</p>}
                   </li>
                   <li>
