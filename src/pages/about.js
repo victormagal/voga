@@ -54,7 +54,7 @@ export default function About({ qualities, prizes }) {
           </div>
         </Container>
       </ContainerWithBackgroundImage>
-      <ContainerWithBackgroundImage uri='/bg-prizes-about.png'>
+      {/* <ContainerWithBackgroundImage uri='/bg-prizes-about.png'>
         <Container>
           <h1 className='font-bold mb-4 pt-32 text-4xl text-white'>Prêmios</h1>
           <div className='lg:col-span-12 col-span-4 pb-32 grid lg:grid-cols-12 grid-cols-4 gap-4'>
@@ -63,7 +63,7 @@ export default function About({ qualities, prizes }) {
             ))}
           </div>
         </Container>
-      </ContainerWithBackgroundImage>
+      </ContainerWithBackgroundImage> */}
       {/* <div>
         <Container newClasses='py-44'>
           <h1 className='sm:col-span-12 col-span-4 font-bold pb-12 text-5xl text-dark-gray'>Timeline Voga</h1>
